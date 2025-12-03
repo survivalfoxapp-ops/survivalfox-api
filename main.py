@@ -17,3 +17,7 @@ def read_status():
 @app.get("/hello/{name}")
 def read_hello(name: str):
     return {"message": f"Hallo {name}, willkommen bei Survival Fox!"}
+
+@app.get("/hint")
+def get_hint(level: int = 1):
+    return {"hint_level": level, "text": "Hier könnte später dein Spoiler-Hinweis stehen."}
