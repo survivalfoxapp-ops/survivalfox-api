@@ -13,3 +13,7 @@ def read_status():
         "status": "ok",
         "version": "0.0.1"
     }
+
+@app.get("/hello/{name}")
+def read_hello(name: str):
+    return {"message": f"Hallo {name}, willkommen bei Survival Fox!"}
